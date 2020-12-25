@@ -1,0 +1,78 @@
+// Font
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  // Main Color
+
+  --black      : #000000;
+  --white      : #ffffff;
+
+  --primary    : #FE941F;
+  --pLight     : #E2F4E5;
+  --pText      : #fff;
+
+  --textColor  : #2B3036;
+
+  --color1     : #353535;
+  --color2     : #404040;
+  --color3     : #8D8D8D;
+  --color4     : #636363;
+  --color5     : #858585;
+  --color6     : #8F8F8F;
+  --color7     : #707070;
+  --color8     : #A8A8A8;
+  --color9     : #6B6B6B;
+  --color10     :#A7A7A7;
+  --color11     :#DFDFDF;
+  --color12     :#DCDCDC;
+
+  --bgColor    : #F1F1F1;
+}
+
+
+@mixin desktop {
+  @media screen and (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin desktop_sm {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop_xs {
+  @media screen and (max-width: 1050px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile-sm {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin mobile-xs {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+// Transition
+
+@mixin transition-sm {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-md {
+  transition: all 0.5s ease-in-out;
+}

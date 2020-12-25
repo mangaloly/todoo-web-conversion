@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --primary: #FE941F;
+  --pLight: #E2F4E5;
+  --pText: #fff;
+  --textColor: #2B3036;
+  --color1: #353535;
+  --color2: #404040;
+  --color3: #8D8D8D;
+  --color4: #636363;
+  --color5: #858585;
+  --color6: #8F8F8F;
+  --color7: #707070;
+  --color8: #A8A8A8;
+  --color9: #6B6B6B;
+  --color10:#A7A7A7;
+  --color11:#DFDFDF;
+  --color12:#DCDCDC;
+  --bgColor: #F1F1F1;
+}
+
+.header {
+  position: relative;
+  background-color: transparent;
+  padding: 70px 0 80px;
+}
+
+.header .navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .navbar .navbar-logo {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+}
+
+.header .navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .navbar .navbar-nav .nav-item {
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navbar .navbar-nav .nav-item:last-of-type {
+  padding-right: 0;
+}
+
+.header .navbar .navbar-nav .nav-item.active, .header .navbar .navbar-nav .nav-item:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navbar .navbar-nav .nav-item.active .nav-link, .header .navbar .navbar-nav .nav-item:hover .nav-link {
+  color: var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color3);
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-call-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.header .navbar .navbar-nav .nav-item.dropdown .dropdown-toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header .navbar .navbar-nav .nav-item.dropdown .dropdown-toggle::after {
+  content: '';
+  background: url(../img/chevron-down.svg) center center no-repeat;
+  background-size: contain;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  margin-left: 3px;
+}
+
+.header .navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+.footer {
+  position: relative;
+  background-color: var(--color1);
+  padding: 70px 0;
+}
+
+.footer .footer-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.footer .footer-list li {
+  display: block;
+  padding: 0 20px;
+}
+
+.footer .footer-list li:first-child {
+  padding-left: 0;
+}
+
+.footer .footer-list li a {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color12);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-list li a:hover {
+  color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-list.narrow li a {
+  font-weight: 400;
+}
+
+.footer .footer-title {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color12);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.footer .footer-logo {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+}
+
+.footer .footer-social {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .footer-social li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+.footer .footer-social li:first-child {
+  padding-left: 0;
+}
+
+.footer .footer-social li a {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-social li a svg path {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-social li a:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-social li a:hover svg path {
+  fill: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-download {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.footer .footer-download li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.footer .footer-download li:last-child {
+  margin-right: 0;
+}
+
+.footer .footer-download li a {
+  display: block;
+  width: 130px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.contact {
+  position: relative;
+  padding: 100px 0 180px;
+}
+
+.contact .contact-wrapper {
+  display: block;
+  border-radius: 75px;
+}
+
+.contact .contact-wrapper .slider-wrapper {
+  display: block;
+  width: 100%;
+  padding: 100px 30px 100px 100px;
+}
+
+.contact .contact-wrapper .slider-wrapper .contact-title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color4);
+  letter-spacing: 5px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-top: 110px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav {
+  display: block;
+  width: 70%;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 9.91px 9.91px 15px #cdcdcd, -9.91px -9.91px 15px #FFFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev:hover, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev:hover .icon img, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next:hover .icon img {
+  filter: invert(1);
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev .icon, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next .icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  background-color: transparent;
+  margin: 0 auto;
+  position: relative;
+  top: -2px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev .icon img, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next .icon img {
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-prev.owl-next, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-nav .owl-next.owl-next {
+  float: right;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-dots {
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color10);
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-dots .owl-dot:first-of-type {
+  margin-left: 0;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-dots .owl-dot.active, .contact .contact-wrapper .slider-wrapper .address-slider .owl-carousel .owl-dots .owl-dot:hover {
+  background-color: var(--color1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .item .title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--color4);
+  margin-bottom: 10px;
+}
+
+.contact .contact-wrapper .slider-wrapper .address-slider .item .text {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color5);
+  line-height: 1.6;
+}
+
+.contact .contact-wrapper .form-wrapper {
+  display: block;
+  padding: 80px 60px 70px;
+  border-radius: 75px;
+}
+
+.contact .contact-wrapper .form-wrapper .form-title {
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--shade4);
+}
+
+.contact .contact-wrapper .form-wrapper .form-meta {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--color9);
+  margin-bottom: 25px;
+}
+
+.contact .contact-wrapper .form-wrapper .contact-form {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.contact .contact-wrapper .form-wrapper .contact-form .form-group {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 9.91px 9.91px 15px -5px #DBDBDB, -9.91px -9.91px 15px -5px #FFFFFF;
+  border-radius: 16px;
+}
+
+.contact .contact-wrapper .form-wrapper .contact-form input {
+  display: block;
+  width: 100%;
+  height: 55px;
+  border-radius: 16px;
+  padding: 0 20px;
+  border: 5px solid var(--bgColor);
+  background-color: transparent;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--shade3);
+  outline: none;
+  box-shadow: inset 10px 10px 15px #DBDBDB, inset 10px 10px 15px #FFFFFF;
+}
+
+.contact .contact-wrapper .form-wrapper .contact-form input::placeholder {
+  color: var(--color5);
+}
+
+.contact .contact-wrapper .form-wrapper .contact-form button {
+  display: inline-block;
+  height: 50px;
+  padding: 0 20px;
+  min-width: 185px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 16px;
+}
+
+.contact .contact-wrapper .form-wrapper .form-text {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--shade4);
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.contact .contact-wrapper .form-wrapper .form-text::before {
+  content: '';
+  height: 1px;
+  width: 130px;
+  background: var(--color11);
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--shade5) var(--shade12);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bgColor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color11);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color9);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover:not([href]):not([tabindex]) {
+  color: var(--primary);
+}
+
+a:not([href]):not([tabindex]) {
+  color: var(--textColor);
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mb-3 {
+  margin-bottom: 30px !important;
+}
+
+.mb-5 {
+  margin-bottom: 50px !important;
+}
+
+.mb-8 {
+  margin-bottom: 80px !important;
+}
+
+.mt-3 {
+  margin-top: 30px !important;
+}
+
+.mt-5 {
+  margin-top: 50px !important;
+}
+
+.mt-8 {
+  margin-top: 80px !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.o-shade {
+  box-shadow: 9.91px 9.91px 15px #cdcdcd, -9.91px -9.91px 15px #FFFFFF;
+}
+
+.o-shade-big {
+  box-shadow: 9.91px 9.91px 15px -5px #cdcdcd, -9.91px -9.91px 15px -5px #FFFFFF;
+}
+/*# sourceMappingURL=main.css.map */

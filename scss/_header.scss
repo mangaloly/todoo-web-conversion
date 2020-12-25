@@ -1,0 +1,80 @@
+.header {
+  position: relative;
+  background-color: transparent;
+  padding: 70px 0 80px;
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .navbar-logo {
+      display: inline-block;
+      width: 110px;
+      height: 40px;
+    }
+    .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      .nav-item {
+        padding: 0 15px;
+        @include transition-sm;
+        &:last-of-type {
+          padding-right: 0;
+        }
+        &.active, &:hover {
+          @include transition-sm;
+          .nav-link {
+            color: var(--black);
+            @include transition-sm;
+          }
+        }
+        .nav-link {
+          display: block;
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--color3);
+          text-transform: uppercase;
+          @include transition-sm;
+        }
+
+        .nav-call-trigger {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 55px;
+          height: 55px;
+          text-align: center;
+          border-radius: 50%;
+        }
+        
+        &.dropdown {
+          .dropdown-toggle {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            &::after {
+              content: '';
+              background: url(../img/chevron-down.svg) center center no-repeat;
+              background-size: contain;
+              width: 23px;
+              height: 23px;
+              display: inline-block;
+              vertical-align: middle;
+              position: relative;
+              top: -3px;
+              margin-left: 3px;
+            }
+          }
+          .dropdown-menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

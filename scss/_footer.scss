@@ -1,0 +1,103 @@
+.footer {
+  position: relative;
+  background-color: var(--color1);
+  padding: 70px 0;
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    li {
+      display: block;
+      padding: 0 20px;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--color12);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        @include transition-sm;
+        &:hover {
+          color: var(--primary);
+          @include transition-sm;
+        }
+      }
+    }
+    &.narrow {
+      li {
+        a {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .footer-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color12);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .footer-logo {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+  }
+  .footer-social {
+    display: inline-block;
+    vertical-align: middle;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 5px;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        @include transition-sm;
+        svg {
+          path {
+            @include transition-sm;
+          }
+        }
+        &:hover {
+          @include transition-sm;
+          svg {
+            path {
+              fill: var(--primary);
+              @include transition-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-download {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        width: 130px;
+        height: 45px;
+        overflow: hidden;
+      }
+    }
+  }
+}
